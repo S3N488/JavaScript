@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number1 = prompt("Введите первое число:");
+        if (!isNaN(number1)) {
+            let number2 = prompt("Введите второе число:");
+            if (!isNaN(number2)) {
+                let average = (Number(number1) + Number(number2)) / 2;
+                alert("Среднее арифметическое: " + average);
+            } else {
+                alert("Вы ввели некорректное второе число.");
+            }
+        } else {
+            alert("Вы ввели некорректное первое число.");
+        }
+    </script>
+</body>
+
+</html>

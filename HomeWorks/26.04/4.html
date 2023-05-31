@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = prompt("Введите трехзначное число:");
+        if (!isNaN(number) && number.length === 3) {
+            // Проверка наличия одинаковых цифр
+            let digit1 = number.charAt(0);
+            let digit2 = number.charAt(1);
+            let digit3 = number.charAt(2);
+
+            if (digit1 === digit2 || digit1 === digit3 || digit2 === digit3) {
+                alert("В числе есть одинаковые цифры.");
+            } else {
+                alert("В числе нет одинаковых цифр.");
+            }
+        } else {
+            alert("Вы ввели некорректное трехзначное число.");
+        }
+    </script>
+</body>
+
+</html>

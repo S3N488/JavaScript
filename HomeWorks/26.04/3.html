@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let purchaseAmount = prompt("Введите сумму покупки:");
+        if (!isNaN(purchaseAmount)) {
+            purchaseAmount = Number(purchaseAmount);
+
+            let discount;
+
+            if (purchaseAmount >= 200 && purchaseAmount < 300) {
+                discount = 0.03; // 3%
+            } else if (purchaseAmount >= 300 && purchaseAmount < 500) {
+                discount = 0.05; // 5%
+            } else if (purchaseAmount >= 500) {
+                discount = 0.07; // 7%
+            } else {
+                discount = 0; // Нет скидки
+            }
+            // Вычисление суммы к оплате со скидкой
+            let totalAmount = purchaseAmount - (purchaseAmount * discount);
+            alert("Сумма к оплате со скидкой: " + totalAmount);
+        } else {
+            alert("Вы ввели некорректную сумму покупки.");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.menu ul {
+			margin: 0;
+			list-style: none;
+			padding-left: 20px;
+			display: none;
+		}
+
+		.menu .title {
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		.menu .title::before {
+			content: '▶ ';
+			font-size: 80%;
+			color: green;
+		}
+
+		.open.title::before {
+			content: '▼ ';
+			color: red;
+		}
+
+		.open+ul {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="menu" class="menu">
+		<p class="title">Сладости (нажми меня)!</p>
+		<ul>
+			<li>Пирожное</li>
+			<li>Пончик</li>
+			<li>Мёд</li>
+		</ul>
+		<p class="title">Напитки (нажми меня)!</p>
+		<ul>
+			<li>Сок</li>
+			<li>Фанта</li>
+			<li>Пепси</li>
+		</ul>
+		<p class="title">Напитки 1(нажми меня)!</p>
+		<ul>
+			<li>Сок</li>
+			<li>Фанта</li>
+			<li>Пепси</li>
+		</ul>
+		<p class="title">Напитки 2(нажми меня)!</p>
+		<ul>
+			<li>Сок</li>
+			<li>Фанта</li>
+			<li>Пепси</li>
+		</ul>
+		<p class="title">Напитки 3(нажми меня)!</p>
+		<ul>
+			<li>Сок</li>
+			<li>Фанта</li>
+			<li>Пепси</li>
+		</ul>
+	</div>
+	<script src="js/4.js"></script>
+</body>
+
+</html>

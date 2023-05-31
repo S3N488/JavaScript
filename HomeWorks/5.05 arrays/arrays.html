@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [];
+        for (let i = 0; i < 10; i++) {
+            let randomNumber = Math.floor(Math.random() * 10);
+            array.push(randomNumber);
+        }
+
+        function differenceWithMax(array) {
+            let max = Math.max(...array);
+            return array.map((num) => max - num);
+        }
+
+        function arrayBeforeZero(array) {
+            let zeroIndex = array.indexOf(0);
+            if (zeroIndex !== -1) {
+                return array.slice(0, zeroIndex);
+            } else {
+                return [];
+            }
+        }
+
+        function removeDuplicates(array) {
+            return array.filter((value, index, self) => {
+                return self.indexOf(value) === index;
+            });
+        }
+        console.log("Исходный массив:", array);
+
+        let diffArray = differenceWithMax(array);
+        console.log("Массив разницы с максимальным элементом:", diffArray);
+
+        let arrayBeforeZeroResult = arrayBeforeZero(array);
+        console.log("Массив до первого нуля:", arrayBeforeZeroResult);
+
+        let uniqueArray = removeDuplicates(array);
+        console.log("Массив без повторяющихся элементов:", uniqueArray);
+    </script>
+</body>
+
+</html>

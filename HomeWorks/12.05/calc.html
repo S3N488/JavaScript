@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Calculator() {
+            this.value1 = 0;
+            this.value2 = 0;
+
+            this.read = function() {
+                this.value1 = parseFloat(prompt("Введите первое значение:"));
+                this.value2 = parseFloat(prompt("Введите второе значение:"));
+            };
+
+            this.sum = function() {
+                return this.value1 + this.value2;
+            };
+
+            this.mul = function() {
+                return this.value1 * this.value2;
+            };
+        }
+        let calculator = new Calculator();
+        calculator.read();
+        alert("Sum = " + calculator.sum());
+        alert("Mul = " + calculator.mul());
+    </script>
+</body>
+
+</html>
